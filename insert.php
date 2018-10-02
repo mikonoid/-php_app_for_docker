@@ -1,11 +1,12 @@
 <?php
 $host = "localhost";
 $user = "test";
-$password = "123456";
+$password = "1237777";
 $db = "test";
 
+//check if db connection is ok
 if (!$conn = mysql_connect ($host, $user, $password)){
-		echo "<h2>MySQL Error!</h2>";
+		echo "<h2>MySQL Connection error!</h2>";
 	exit;
 }
 
@@ -18,6 +19,6 @@ $result = mysql_query("INSERT INTO record (record_name,record_value) VALUES ('$n
 
         if($result == 'true')
                 {echo "Data was added";}
-        else{echo "OOOOPSSS something wrong";}
+        else{echo "OOOOPSSS something went wrong";}
 
 ?>
